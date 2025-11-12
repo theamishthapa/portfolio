@@ -7,6 +7,30 @@ const Contact = () => {
     AOS.init({ duration: 1000, once: true });
   }, []);
 
+  const handleSubmit = async (e) => {
+    e.preventDefault(); // stop page reload
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch("https://formspree.io/f/movyvawn", {
+        method: "POST",
+        body: formData,
+        headers: { Accept: "application/json" },
+      });
+
+      if (response.ok) {
+        alert("Message sent successfully!");
+        form.reset(); // clear all fields
+      } else {
+        alert("Failed to send message. Please try again later.");
+      }
+    } catch (error) {
+      alert("Something went wrong. Please try again later.");
+    }
+  };
+
   return (
     <section
       id="contact"
@@ -14,33 +38,38 @@ const Contact = () => {
       data-aos="fade-up"
     >
       <h2 className="text-4xl md:text-8xl font-semibold mb-6 md:mb-16 text-gray-300">
-        Get in{" "}
-        <span className="text-gray-200  text-6xl md:text-9xl">Touch</span>
+        Get in <span className="text-gray-200 text-6xl md:text-9xl">Touch</span>
       </h2>
+
       <p className="text-gray-400 mb-10 max-w-md">
         Have a question, project idea, or wanna discuss some freelance projects?
         I’d love to hear from you.
       </p>
 
       <form
+        onSubmit={handleSubmit}
         className="flex flex-col w-full max-w-md space-y-4"
-        onSubmit={(e) => e.preventDefault()}
         data-aos="fade-up"
         data-aos-delay="200"
       >
         <input
           type="text"
+          name="name"
           placeholder="Your Name"
           required
           className="p-3 border border-gray-300 bg-transparent text-gray-900 outline-none focus:border-black transition duration-300"
         />
+
         <input
           type="email"
+          name="email"
           placeholder="Your Email"
           required
           className="p-3 border border-gray-300 bg-transparent text-gray-900 outline-none focus:border-black transition duration-300"
         />
+
         <textarea
+          name="message"
           placeholder="Your Message"
           rows="5"
           required
