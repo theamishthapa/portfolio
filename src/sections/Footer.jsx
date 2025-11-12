@@ -45,8 +45,8 @@ const Footer = () => {
         {/* Right: Contact */}
         <div className="md:w-1/3">
           <h3 className="text-xl font-semibold text-white mb-4">Contact</h3>
-          <p className="text-gray-400">Email: amish@example.com</p>
-          <p className="text-gray-400">Phone: +977-XXXXXXXXX</p>
+          <p className="text-gray-400">Email: thapaamish805@gmail.com</p>
+          <p className="text-gray-400">Phone: +977-9848830447</p>
         </div>
       </div>
 

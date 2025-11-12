@@ -3,10 +3,19 @@ import { useState } from "react";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <nav className="fixed top-0 left-0 w-full bg-transparent text-white px-6 py-6 flex justify-between items-center z-50">
       {/* Left side - Logo/Name */}
-      <h1 className="text-3xl font-bold">Amish Thapa</h1>
+      <button
+        onClick={scrollToTop}
+        className="text-3xl font-bold hover:text-blue-400 transition-colors duration-200 cursor-pointer"
+      >
+        Amish Thapa
+      </button>
 
       {/* Mobile Menu Button */}
       <button
