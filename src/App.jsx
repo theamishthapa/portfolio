@@ -8,6 +8,7 @@ import Projects from "./sections/Projects";
 import Quote from "./sections/Quote";
 import AOS from "aos";
 import "aos/dist/aos.css"; // **must** be imported
+import Contact from "./sections/Contact";
 
 function App() {
   useEffect(() => {
@@ -20,6 +21,7 @@ function App() {
       <About data-aos="fade-up" />
       <Projects data-aos="fade-up" />
       <Quote data-aos="fade-up" />
+      <Contact data-aos="fade-up" />
       <Footer data-aos="fade-up" />
     </>
   );
