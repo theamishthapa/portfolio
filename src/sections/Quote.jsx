@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import quoteBg from "../assets/images/quote-bg.jpg";
 
 const Quote = () => {
   const [quote, setQuote] = useState("");
@@ -27,8 +28,7 @@ const Quote = () => {
       id="quote"
       className="relative w-full h-96 flex items-center justify-center text-center overflow-hidden"
       style={{
-        backgroundImage:
-          "url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1400&q=80&grayscale')",
+        backgroundImage: `url(${quoteBg})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed", // simple parallax effect
