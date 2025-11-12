@@ -50,13 +50,6 @@ const Quote = () => {
       <div className="relative z-10 max-w-3xl px-6 text-white">
         <p className="text-2xl md:text-4xl font-semibold mb-6">"{quote}"</p>
         <p className="text-lg md:text-xl font-light">— {author}</p>
-
-        <button
-          onClick={fetchQuote}
-          className="mt-6 px-6 py-3 border border-white text-white font-medium bg-transparent hover:bg-white hover:text-black transition"
-        >
-          New Quote
-        </button>
       </div>
     </section>
   );

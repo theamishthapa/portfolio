@@ -33,7 +33,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="bg-gray-100 py-40">
+    <section id="projects" className="bg-gray-100 py-40" data-aos="fade-up">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <h2 className="text-6xl font-semibold text-gray-400 mb-16">Projects</h2>
 
@@ -44,6 +44,8 @@ const Projects = () => {
               className={`bg-white rounded-lg shadow-lg overflow-hidden flex flex-col transition-transform transform hover:scale-105 ${
                 index % 2 !== 0 ? "md:mt-12" : ""
               }`}
+              data-aos="fade-up" // Animate each card
+              data-aos-delay={index * 100} // stagger by 100ms
             >
               <img
                 src={project.image}
@@ -51,7 +53,7 @@ const Projects = () => {
                 className="w-full h-64 object-cover"
               />
               <div className="p-6 flex flex-col gap-4">
-                <h3 className="text-2xl font-semibold text-gray-900">
+                <h3 className="text-2xl font-semibold text-gray-400">
                   {project.title}
                 </h3>
                 <div className="flex gap-4">

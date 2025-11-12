@@ -1,17 +1,35 @@
-import React from "react";
-import heroImage from "../assets/images/hero-landscape.jpg"; // your black & white portrait
+import React, { useEffect, useState } from "react";
+import heroImage from "../assets/images/hero-landscape.jpg";
 
 const Hero = () => {
+  const [offsetY, setOffsetY] = useState(0);
+
+  const handleScroll = () => {
+    setOffsetY(window.scrollY * 0.5); // adjust speed factor
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <section
-      className="relative w-full h-screen flex items-center"
-      style={{
-        backgroundImage: `url(${heroImage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "top",
-      }}
+      id="hero"
+      className="relative w-full h-screen flex items-center overflow-hidden"
+      data-aos="fade-up" // ✅ proper AOS usage
     >
-      {/* Overlay for subtle dark effect */}
+      {/* Parallax Background */}
+      <div
+        className="absolute top-0 left-0 w-full h-full bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${heroImage})`,
+          transform: `translateY(${offsetY}px)`,
+          backgroundPosition: "top",
+        }}
+      ></div>
+
+      {/* Overlay */}
       <div className="absolute inset-0 bg-black/40"></div>
 
       {/* Content */}

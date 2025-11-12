@@ -13,10 +13,18 @@ const skills = [
 
 const About = () => {
   return (
-    <section id="about" className="bg-white py-40">
+    <section
+      id="about"
+      className="bg-white py-40"
+      data-aos="fade-up" // Animate the whole section
+    >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-start md:items-center">
         {/* Left: Text */}
-        <div className="md:w-1/2 mb-10 md:mb-0">
+        <div
+          className="md:w-1/2 mb-10 md:mb-0"
+          data-aos="fade-right" // Staggered animation for left side
+          data-aos-delay="100"
+        >
           <h2 className="text-8xl font-semibold text-gray-300 mb-12">
             <span className="text-gray-200">About</span> Me
           </h2>
@@ -33,7 +41,11 @@ const About = () => {
         </div>
 
         {/* Right: Skills */}
-        <div className="md:w-1/2 md:pl-12">
+        <div
+          className="md:w-1/2 md:pl-12"
+          data-aos="fade-left" // Staggered animation for right side
+          data-aos-delay="200"
+        >
           <h3 className="text-4xl font-semibold text-gray-300 mb-8">
             My Skills
           </h3>
