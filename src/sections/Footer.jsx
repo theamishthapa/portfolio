@@ -20,7 +20,7 @@ const Footer = () => {
           <h3 className="text-xl font-semibold text-white mb-4">Quick Links</h3>
           <ul className="space-y-2">
             <li>
-              <a href="#hero" className="hover:text-white transition">
+              <a href="#home" className="hover:text-white transition">
                 Home
               </a>
             </li>
@@ -35,8 +35,8 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="#quote" className="hover:text-white transition">
-                Quote
+              <a href="#contact" className="hover:text-white transition">
+                Contact
               </a>
             </li>
           </ul>
@@ -51,14 +51,14 @@ const Footer = () => {
       </div>
 
       {/* Social Footer */}
-      <div className="bg-gray-900 py-6">
+      <div className="bg-neutral-900 py-6">
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center flex-col md:flex-row">
           <p className="text-gray-400 text-sm mb-4 md:mb-0">
             © {new Date().getFullYear()} Amish Thapa. All rights reserved.
           </p>
           <div className="flex gap-6 text-gray-400 text-xl">
             <a
-              href="#"
+              href="https://www.github.com/theamishthapa/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition"
@@ -66,7 +66,7 @@ const Footer = () => {
               <FaGithub />
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/in/theamishthapa/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition"
@@ -74,7 +74,7 @@ const Footer = () => {
               <FaLinkedin />
             </a>
             <a
-              href="#"
+              href="https://www.x.com/theamishthapa/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition"
@@ -82,7 +82,7 @@ const Footer = () => {
               <FaTwitter />
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/theamishthapa/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition"

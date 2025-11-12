@@ -15,7 +15,7 @@ const Hero = () => {
 
   return (
     <section
-      id="hero"
+      id="home"
       className="relative w-full h-screen flex items-center overflow-hidden"
       data-aos="fade-up" // ✅ proper AOS usage
     >
