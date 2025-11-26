@@ -2,30 +2,16 @@ import React from "react";
 
 const projects = [
   {
-    title: "Project 1",
+    title: "WePlumbnHeat Client Project",
     image:
       "https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?auto=format&fit=crop&w=800&q=80&grayscale",
     github: "#",
-    demo: "#",
+    demo: "https://weplumbnheat.co.uk/",
   },
   {
-    title: "Project 2",
+    title: "EHealth",
     image:
       "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80&grayscale",
-    github: "#",
-    demo: "#",
-  },
-  {
-    title: "Project 3",
-    image:
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80&grayscale",
-    github: "#",
-    demo: "#",
-  },
-  {
-    title: "Project 4",
-    image:
-      "https://images.unsplash.com/photo-1519337265831-281ec6cc8514?auto=format&fit=crop&w=800&q=80&grayscale",
     github: "#",
     demo: "#",
   },
@@ -36,7 +22,7 @@ const Projects = () => {
     <section id="projects" className="bg-gray-100 py-40" data-aos="fade-up">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <h2 className="text-6xl md:text-8xl font-semibold text-gray-300 mb-16">
-          Projects
+          My Latest Works
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -59,14 +45,14 @@ const Projects = () => {
                   {project.title}
                 </h3>
                 <div className="flex gap-4">
-                  <a
+                  {/* <a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="px-4 py-2 bg-gray-900 text-white font-medium hover:bg-gray-800 transition"
                   >
                     GitHub
-                  </a>
+                  </a> */}
                   <a
                     href={project.demo}
                     target="_blank"
