@@ -9,6 +9,7 @@ import Quote from "./sections/Quote";
 import AOS from "aos";
 import "aos/dist/aos.css"; // **must** be imported
 import Contact from "./sections/Contact";
+import Experience from "./sections/Experience";
 
 function App() {
   useEffect(() => {
@@ -19,6 +20,7 @@ function App() {
       <Navbar />
       <Hero data-aos="fade-up" />
       <About data-aos="fade-up" />
+      <Experience data-aos="fade-up" />
       <Projects data-aos="fade-up" />
       <Quote data-aos="fade-up" />
       <Contact data-aos="fade-up" />

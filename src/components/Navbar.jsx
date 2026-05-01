@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -54,7 +54,7 @@ export default function Navbar() {
 
       {/* Desktop Nav */}
       <ul className="hidden md:flex space-x-8">
-        {["home", "about", "projects", "contact"].map((id) => (
+        {["home", "about", "experience", "projects", "contact"].map((id) => (
           <li
             key={id}
             onClick={() => scrollToSection(id)}
@@ -81,15 +81,17 @@ export default function Navbar() {
             style={{ transformOrigin: "top right" }}
             className="fixed inset-0 bg-black flex flex-col items-center justify-center text-white text-2xl space-y-8 z-50"
           >
-            {["home", "about", "projects", "contact"].map((id) => (
-              <button
-                key={id}
-                onClick={() => scrollToSection(id)}
-                className="hover:text-gray-400 transition"
-              >
-                {id.charAt(0).toUpperCase() + id.slice(1)}
-              </button>
-            ))}
+            {["home", "about", "experience", "projects", "contact"].map(
+              (id) => (
+                <button
+                  key={id}
+                  onClick={() => scrollToSection(id)}
+                  className="hover:text-gray-400 transition"
+                >
+                  {id.charAt(0).toUpperCase() + id.slice(1)}
+                </button>
+              ),
+            )}
 
             {/* Social Links */}
             <div className="flex gap-6 mt-8">
