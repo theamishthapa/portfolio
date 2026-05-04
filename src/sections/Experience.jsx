@@ -84,7 +84,7 @@ const Experience = () => {
               <div className="space-y-2 md:space-y-3">
                 {exp.highlights.map((highlight, i) => (
                   <div key={i} className="flex items-start gap-2 md:gap-3">
-                    <span className="text-gray-300 font-semibold mt-0.5 flex-shrink-0">
+                    <span className="text-gray-300 font-semibold mt-0.5 shrink-0">
                       →
                     </span>
                     <p className="text-gray-400 text-sm sm:text-base">
