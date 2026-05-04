@@ -33,47 +33,63 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="bg-gray-950 py-40" data-aos="fade-up">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+    <section
+      id="experience"
+      className="bg-white py-20 md:py-40"
+      data-aos="fade-up"
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
         {/* Heading */}
-        <div className="mb-20" data-aos="fade-right" data-aos-delay="100">
-          <h2 className="text-8xl font-semibold text-gray-300 mb-4">
+        <div
+          className="mb-12 md:mb-20"
+          data-aos="fade-right"
+          data-aos-delay="100"
+        >
+          <h2 className="text-4xl sm:text-6xl md:text-8xl font-semibold text-gray-300 mb-2 md:mb-4">
             <span className="text-gray-200">Experience</span>
           </h2>
-          <p className="text-gray-400 text-lg ml-4">
+          <p className="text-gray-400 text-base sm:text-lg md:text-lg sm:ml-4">
             My professional journey in web development
           </p>
         </div>
 
         {/* Experience Cards */}
-        <div className="space-y-8">
+        <div className="space-y-6 md:space-y-8">
           {experiences.map((exp, index) => (
             <div
               key={exp.id}
-              className="border border-gray-200 p-8 hover:border-gray-300 transition-colors duration-300"
+              className="border border-gray-200 p-4 sm:p-6 md:p-8 hover:border-gray-300 transition-colors duration-300"
               data-aos="fade-up"
               data-aos-delay={`${200 + index * 100}`}
             >
               {/* Header */}
-              <div className="mb-6">
-                <h3 className="text-2xl font-semibold text-gray-200 mb-2">
+              <div className="mb-4 md:mb-6">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-200 mb-1 md:mb-2">
                   {exp.role}
                 </h3>
-                <p className="text-gray-400 text-lg mb-1">{exp.company}</p>
-                <p className="text-gray-500 text-sm">{exp.duration}</p>
+                <p className="text-gray-400 text-sm sm:text-base md:text-lg mb-1">
+                  {exp.company}
+                </p>
+                <p className="text-gray-500 text-xs sm:text-sm">
+                  {exp.duration}
+                </p>
               </div>
 
               {/* Description */}
-              <p className="text-gray-400 text-lg mb-6 leading-relaxed">
+              <p className="text-gray-400 text-sm sm:text-base md:text-lg mb-4 md:mb-6 leading-relaxed">
                 {exp.description}
               </p>
 
               {/* Highlights */}
-              <div className="space-y-3">
+              <div className="space-y-2 md:space-y-3">
                 {exp.highlights.map((highlight, i) => (
-                  <div key={i} className="flex items-start gap-3">
-                    <span className="text-gray-300 font-semibold mt-1">→</span>
-                    <p className="text-gray-400">{highlight}</p>
+                  <div key={i} className="flex items-start gap-2 md:gap-3">
+                    <span className="text-gray-300 font-semibold mt-0.5 flex-shrink-0">
+                      →
+                    </span>
+                    <p className="text-gray-400 text-sm sm:text-base">
+                      {highlight}
+                    </p>
                   </div>
                 ))}
               </div>
