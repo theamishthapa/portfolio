@@ -35,7 +35,7 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="bg-white py-20 md:py-40"
+      className="bg-white py-20 md:py-10"
       data-aos="fade-up"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
@@ -64,7 +64,7 @@ const Experience = () => {
             >
               {/* Header */}
               <div className="mb-4 md:mb-6">
-                <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-200 mb-1 md:mb-2">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-400 mb-1 md:mb-2">
                   {exp.role}
                 </h3>
                 <p className="text-gray-400 text-sm sm:text-base md:text-lg mb-1">

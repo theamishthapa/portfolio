@@ -1,28 +1,6 @@
-import React, { useEffect, useState } from "react";
 import quoteBg from "../assets/images/quote-bg.jpg";
 
 const Quote = () => {
-  const [quote, setQuote] = useState("");
-  const [author, setAuthor] = useState("");
-
-  // Fetch random quote
-  const fetchQuote = async () => {
-    try {
-      const response = await fetch("https://api.quotable.io/random");
-      const data = await response.json();
-      setQuote(data.content);
-      setAuthor(data.author);
-    } catch (error) {
-      console.error("Failed to fetch quote:", error);
-      setQuote("Stay hungry, stay foolish.");
-      setAuthor("Steve Jobs");
-    }
-  };
-
-  useEffect(() => {
-    fetchQuote();
-  }, []);
-
   return (
     <section
       id="quote"
@@ -31,8 +9,8 @@ const Quote = () => {
         backgroundImage: `url(${quoteBg})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        backgroundAttachment: "fixed", // simple parallax effect
-        filter: "grayscale(100%)", // full grayscale
+        backgroundAttachment: "fixed",
+        filter: "grayscale(100%)",
       }}
     >
       {/* Overlay */}
@@ -48,8 +26,10 @@ const Quote = () => {
 
       {/* Quote content */}
       <div className="relative z-10 max-w-3xl px-6 text-white">
-        <p className="text-2xl md:text-4xl font-semibold mb-6">"{quote}"</p>
-        <p className="text-lg md:text-xl font-light">— {author}</p>
+        <p className="text-2xl md:text-4xl font-semibold mb-6">
+          "Discipline is choosing what you want most over what you want now."
+        </p>
+        <p className="text-lg md:text-xl font-light"></p>
       </div>
     </section>
   );
